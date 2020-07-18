@@ -48,7 +48,7 @@ def updateKernelBaseLine():
 def grabbingSupportconfig():
     # Collecting and parsing information from supportconfig txt files via def basic_environment
      systemInformation = basic_environment()
-     print(json.dumps(systemInformation, sort_keys=False, indent=True))
+     print(json.dumps(systemInformation, sort_keys=False, indent=4))
 
 def basic_environment():
     with open("basic-environment.txt") as f:
