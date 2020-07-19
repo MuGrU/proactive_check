@@ -139,7 +139,8 @@ def main():
         elif current_argument in ("-p"):
             print_formats()
 
-print_formats()
+#Uncomment for debug
+#print_formats()
 
 if __name__ == "__main__":
     main()
