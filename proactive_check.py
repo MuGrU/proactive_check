@@ -109,7 +109,7 @@ def print_formats():
 def main():
 
     short_options = "ho:f:vep"
-    long_options = ["help", "output=", "file=", "verbose", "extract"]
+    long_options = ["help", "output=", "file=", "verbose", "extract", "print"]
 
     try:
         arguments, values = getopt.getopt(argument_list, short_options, long_options)
@@ -124,16 +124,17 @@ def main():
         elif current_argument in ("-h", "--help"):
             print_banner()
             print("Usage: ./proactive_check arguments")
-            print("Example of usage: ./proactive_check -e file.tar.xz")
             print("=============================================================================")
             print("-----------------------------------------------------------------------------")
-            print("long argument               short argument                        with value")
+            print("long argument               short argument       obs               with value")
             print("-----------------------------------------------------------------------------")
             print("--help                       -h                                    no")
             print("--output                     -o                                    yes")
             print("--help                       -h                                    no")
             print("--extract                    -e                                    no")
+            print("--print                      -p   ***  Run and print results ***   no")
             print("-----------------------------------------------------------------------------")
+            print("Example of usage: ./proactive_check -p\n")
         elif current_argument in ("-e", "--extract"):
             extractSupportconfig()
         elif current_argument in ("-p"):
